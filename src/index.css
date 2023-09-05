@@ -85,3 +85,35 @@ button:focus-visible {
     background-color: #f9f9f9 ;
   }
 }
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.listado {
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+
+.card {
+  width: 500px;
+
+}
+
+.titulo {
+  font-size: larger;
+}
+
+.precio {
+  font-size: large;
+}
+.stock {
+  font-size: medium;
+}
+
+.descripcion {
+  text-align: justify;
+  font-size: small;
+}

@@ -4,11 +4,15 @@ const Item = ({id,name, img, price}) => {
     const navigate = useNavigate()
 
     return (
-            <div>
-                <h3>{name}</h3>
-                <img className="imagenes" src={img} alt="Imagen del producto"/>
-                <h3>{price}</h3>
-                <button onClick={() => navigate(`/detail/${id}`)}>Ver</button>
+            <div className="listado">
+                <div className="card">
+                <img className="card-img-top" src={img} alt="Imagen del producto"/>
+                <div className="card-body">
+                    <h3 className="card-title titulo">{name}</h3>
+                    <h4 className="card-text precio">{price}</h4>
+                    <button className="btn btn-secondary" onClick={() => navigate(`/detail/${id}`)}>Ver</button>
+                </div>
+                </div>
             </div>
     )
 }

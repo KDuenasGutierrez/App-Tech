@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom"
+import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -22,7 +23,11 @@ const Navbar = () => {
                 <button onClick={() => navigate(`/category/smartwatch`)}>
                     Smart Watch
                 </button>
+                <button>
+                    <CartWidget />
+                </button>
             </section>
+
         </nav>
     )
 }

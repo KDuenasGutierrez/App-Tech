@@ -19,20 +19,24 @@ const ItemDetail = ({category, name, img, price, stock, description  }) => {
     }
 
     return (
-        <div>
-            <h2>{name}</h2>
-            <h3>{category}</h3>
-            <img className="imagenes detalle" src={img} alt={name} />
-            <h2>{price}</h2>
-            <h3>En stock {stock}</h3>
-            <p className="descripcion">{description} </p>
-            {
-                quantity == 0 ? (
-                        <ItemCount stock={stock} onAdd={handleOnAdd}/>
-                    ) : (
-                        <button> Finalizar Compra </button>
-                    )
-            }
+        <div className="listado">
+            <div className="card">
+                <img className="card-img-top imagen" src={img} alt="Imagen del producto"/>
+                    <div className="card-body">
+                        <h3 className="card-title stock">{category}</h3>
+                        <h3 className="card-title titulo">{name}</h3>
+                        <h4 className="card-text stock">{stock}</h4>
+                        <h4 className="card-text precio">{price}</h4>
+                        <h5 className="card-text descripcion">{description}</h5>
+                        {
+                            quantity == 0 ? (
+                                    <ItemCount stock={stock} onAdd={handleOnAdd}/>
+                                ) : (
+                                    <button> Finalizar Compra </button>
+                                )
+                        }
+                    </div>
+            </div>
         </div>
     )
 } 

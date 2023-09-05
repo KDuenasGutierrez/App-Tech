@@ -5,10 +5,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return (
         <div>
-            <h5>1</h5>
-            <button>-</button>
+            <h5>{count}</h5>
+            <button onClick={() => setCount((count) => count - 1)}>-</button>
             <button onClick={()=> onAdd(count)}>Agregar a la Cesta</button>
-            <button>+</button>
+            <button onClick={() => setCount((count) => count + 1)}>+</button>
         </div>
     )
 }

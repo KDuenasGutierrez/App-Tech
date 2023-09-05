@@ -1,18 +1,22 @@
+import {useNavigate} from "react-router-dom"
+
 const Navbar = () => {
+    const navigate = useNavigate()
+
     return (
         <nav>
             <h1>EcomTech</h1>
             <section>
-                <button>
+                <button onClick={() => navigate(`/category/tablet`)}>
                     Tablets
                 </button>
-                <button>
+                <button onClick={() => navigate(`/category/notebook`)}>
                     Notebooks
                 </button>
-                <button>
+                <button onClick={() => navigate(`/category/celular`)}>
                     Phones
                 </button>
-                <button>
+                <button onClick={() => navigate(`/category/smartwatch`)}>
                     Smart Watch
                 </button>
             </section>

@@ -30,9 +30,9 @@ const ItemListContainer = ({ Saludo }) => {
 
     if (loading) {
         return(
-            <div class="d-flex justify-content-center">
-                <div id="loadingSpinner" class="spinner-grow text-danger" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            <div className="d-flex justify-content-center">
+                <div  id="loadingSpinner" className="spinner-grow text-danger" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
         )

@@ -5,8 +5,11 @@ const Navbar = () => {
 
     return (
         <nav>
-            <h1 onClick={() => navigate(`/`)}>EcomTech</h1>
+            <h1>EcomTech</h1>
             <section>
+            <button onClick={() => navigate(`/`)}>
+                    Inicio
+                </button>
                 <button onClick={() => navigate(`/category/tablet`)}>
                     Tablets
                 </button>

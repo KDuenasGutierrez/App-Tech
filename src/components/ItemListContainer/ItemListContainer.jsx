@@ -11,6 +11,8 @@ const ItemListContainer = ({ Saludo }) => {
 
     const [productos, setProductos] = useState([])
 
+    const [loading, setLoading] = useState (true)
+
     useEffect( () => {
         const asyncFunction = categoryId ? getProductsByCategory : getProducts
 
@@ -21,7 +23,20 @@ const ItemListContainer = ({ Saludo }) => {
             .catch(error =>{
                 console.error (error)
             })
-    },[categoryId]) 
+            .finally(()=>{
+                setLoading(false)
+            })
+    },[categoryId])
+
+    if (loading) {
+        return(
+            <div class="d-flex justify-content-center">
+                <div id="loadingSpinner" class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )
+    }
 
     return(
         <div>

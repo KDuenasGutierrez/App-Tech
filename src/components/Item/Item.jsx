@@ -10,7 +10,7 @@ const Item = ({id,name, img, price}) => {
                 <div className="card-body">
                     <h3 className="card-title titulo">{name}</h3>
                     <h4 className="card-text precio">{price}</h4>
-                    <button className="btn btn-secondary" onClick={() => navigate(`/detail/${id}`)}>Ver</button>
+                    <button className="btn btn-secondary" onClick={() => navigate(`/detail/${id}`)}>Description</button>
                 </div>
                 </div>
             </div>

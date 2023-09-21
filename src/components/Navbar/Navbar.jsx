@@ -23,7 +23,7 @@ const Navbar = () => {
                 <button onClick={() => navigate(`/category/smartwatch`)}>
                     Smart Watch
                 </button>
-                <button>
+                <button onClick={() => navigate(`/cart`)}>
                     <CartWidget />
                 </button>
             </section>

@@ -86,6 +86,10 @@ button:focus-visible {
   }
 }
 
+.toast-alert{
+  background: linear-gradient(to right, #b08700, #c93d3d);
+}
+
 .logo {
   width: 100px;
   height: auto;

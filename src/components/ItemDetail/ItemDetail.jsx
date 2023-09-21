@@ -1,11 +1,21 @@
+import {useNavigate} from "react-router-dom"
 import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({category, name, img, price, stock, description  }) => {
+const ItemDetail = ({id, category, name, img, price, stock, description, addItem }) => {
 
     const [quantity, setquantity] = useState(0)
 
+    const ItemCountHere = ItemCount
+
     const handleOnAdd = (cantidad) => {
+
+        const objAddToCart = {
+            id, name, price, cantidad
+        }
+
+        addItem(objAddToCart)
 
             Toastify({
 
@@ -29,10 +39,10 @@ const ItemDetail = ({category, name, img, price, stock, description  }) => {
                         <h4 className="card-text precio">{price}</h4>
                         <h5 className="card-text descripcion">{description}</h5>
                         {
-                            quantity == 0 ? (
-                                    <ItemCount stock={stock} onAdd={handleOnAdd}/>
+                            quantity === 0 ? (
+                                    <ItemCountHere stock={stock} onAdd={handleOnAdd}/>
                                 ) : (
-                                    <button> Finalizar Compra </button>
+                                    <Link to='/cart' className='btn btn-success'>Finalizar Compra</Link>
                                 )
                         }
                     </div>

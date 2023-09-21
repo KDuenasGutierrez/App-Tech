@@ -7,7 +7,7 @@ import {useParams} from 'react-router-dom'
 /*             COMO ES UNA PETICION ASINCRONA SE UTILIZA USEEFFECT            */
 /* -------------------------------------------------------------------------- */
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({addItem}) => {
 
     const [productos, setProductos] = useState(null)
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     return (
         <div>
             <h1>Detalle de Producto</h1>
-            <ItemDetail {...productos} />
+            <ItemDetail {...productos} addItem={addItem} />
         </div>
     )
 }

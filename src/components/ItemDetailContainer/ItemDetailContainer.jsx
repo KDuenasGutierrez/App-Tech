@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getProductById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import {useParams} from 'react-router-dom'
+import {db} from '../../services/firebase/firebaseConfig'
+import{getDoc, doc} from 'firebase/firestore'
 
 /* -------------------------------------------------------------------------- */
 /*             COMO ES UNA PETICION ASINCRONA SE UTILIZA USEEFFECT            */
@@ -13,15 +14,37 @@ const ItemDetailContainer = ({addItem}) => {
 
     const {productId} = useParams()
 
+    const [loading, setLoading] = useState (true)
+
     useEffect(() =>{
-        getProductById(productId)
-        .then(res => {
-            setProductos(res)
+
+        setLoading(true)
+
+        const productsRef = doc(db, 'products', productId)
+
+        getDoc(productsRef)
+        .then((documentSnapshot)=>{
+            const fields = documentSnapshot.data()
+            const productsAdapted = {id: documentSnapshot.id, ...fields}
+            setProductos(productsAdapted)
         })
         .catch(error =>{
             console.error (error)
         })
+        .finally(()=>{
+            setLoading(false)
+        })
     },[productId])
+
+    if (loading) {
+        return(
+            <div className="d-flex justify-content-center">
+                <div  id="loadingSpinner" className="spinner-grow text-danger" role="status">
+                    <h2 className="">...Loading Products...</h2>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div>

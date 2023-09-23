@@ -78,7 +78,7 @@ const products = [
         id: '9', 
         name: 'Xiaomi Redmi Note 12 Pro+ 5G Dual SIM 256 GB obsidian black 8 GB RAM', 
         price: 1354900, 
-        category: 'celular', 
+        category: 'category', 
         img:'https://http2.mlstatic.com/D_NQ_NP_933725-MLA54384359928_032023-O.webp', 
         stock: 30, 
         description:'Descubre infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo. Pon a prueba tu creatividad y juega con la iluminación, diferentes planos y efectos para obtener grandes resultados. Además, el dispositivo cuenta con cámara frontal de 16 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas. Mira tus series y películas favoritas con la mejor definición a través de su pantalla AMOLED de 6.67". Disfruta de colores brillantes y detalles precisos en todos tus contenidos. Con su potente procesador y memoria RAM de 8 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras. Con el sensor de huella digital, el acceso es seguro y podrás desbloquearlo automáticamente con un toque. ¡Desenchúfate! Con la súper batería de 5000 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.'

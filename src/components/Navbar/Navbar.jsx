@@ -24,6 +24,7 @@ const Navbar = () => {
                     Smart Watch
                 </button>
             </section>
+            
             <CartWidget />
 
 

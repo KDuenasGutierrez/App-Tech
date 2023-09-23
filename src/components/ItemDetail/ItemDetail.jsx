@@ -12,7 +12,7 @@ const ItemDetail = ({id, category, name, img, price, stock, description,}) => {
     const handleOnAdd = (quantity) => {
 
         const objAddToCart = {
-            id, name, price, quantity
+            id, name, img, price, quantity
         }
 
         addItem(objAddToCart)

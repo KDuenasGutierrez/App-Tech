@@ -1,7 +1,5 @@
 import {useState, createContext, useContext} from 'react'
 
-const CartContext = createContext()
-
 export const CartProvider = ({children}) => {
     
     const [cart, setCart] = useState ([])
@@ -35,6 +33,16 @@ export const CartProvider = ({children}) => {
 
         const totalQuantity = getTotalQ()
 
+        const totalPrice = () => {
+            let totalP = 0
+
+            cart.forEach(prod =>{
+                totalP += prod.quantity * prod.price
+                })
+
+            return totalP
+        }
+
         const removeItem = (id) => {
             setCart(prev => prev.filter(prod => prod.id !== id))
         }
@@ -45,11 +53,13 @@ export const CartProvider = ({children}) => {
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, totalQuantity, removeItem, clean}}>
+        <CartContext.Provider value={{cart, addItem, totalQuantity, totalPrice, removeItem, clean}}>
             {children}
         </CartContext.Provider>
     )
 }
+
+const CartContext = createContext()
 
 export const useCart = () => {
     return useContext(CartContext)

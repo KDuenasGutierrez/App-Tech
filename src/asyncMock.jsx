@@ -3,7 +3,7 @@ const products = [
     { 
         id: '1', 
         name: 'Apple iPad (9ª generación) 10.2" Wi-Fi 64GB - Gris espacial', 
-        price: '$1475191', 
+        price: 1475191, 
         category: 'tablet', 
         img:'https://http2.mlstatic.com/D_NQ_NP_938998-MLA71496726949_092023-O.webp', 
         stock: 10, 
@@ -12,7 +12,7 @@ const products = [
     { 
         id: '2', 
         name: 'Lenovo Tab M10 Plus 3rd Gen TB125FU 10.61" 128GB storm gray y 4GB de memoria RAM', 
-        price: '$1179900', 
+        price: 1179900, 
         category: 'tablet', 
         img:'https://http2.mlstatic.com/D_NQ_NP_794316-MLU70023978735_062023-O.webp', 
         stock: 15, 
@@ -21,7 +21,7 @@ const products = [
     { 
         id: '3', 
         name: 'Samsung Galaxy Tab S S7 FE with S Pen SM-T733 12.4" 128GB mystic black y 6GB de memoria RAM', 
-        price: '$2749900', 
+        price: 2749900, 
         category: 'tablet', 
         img:'https://http2.mlstatic.com/D_NQ_NP_729539-MLA48049063325_102021-O.webp', 
         stock: 20, 
@@ -31,7 +31,7 @@ const products = [
     { 
         id: '4', 
         name: 'Asus E1504fa-nj474 Ryzen 5-7520u Ram 16gb Ssd 512gb', 
-        price: '$1939000', 
+        price: 1939000, 
         category: 'notebook', 
         img:'https://http2.mlstatic.com/D_NQ_NP_758506-MLU69649769306_052023-O.webp', 
         stock: 15, 
@@ -40,7 +40,7 @@ const products = [
     { 
         id: '5', 
         name: 'Lenovo IdeaPad 14ADA05 platinum gray 14", AMD Athlon Silver 3050U 8GB de RAM 256GB SSD, AMD Radeon RX Vega 2 1366x768px Windows 10 Home', 
-        price: '$1180000', 
+        price: 1180000, 
         category: 'notebook', 
         img:'https://http2.mlstatic.com/D_NQ_NP_670935-MLA51988776838_102022-O.webp', 
         stock: 20, 
@@ -49,7 +49,7 @@ const products = [
     { 
         id: '6', 
         name: 'Asus X415EA gris 14", Intel Core i3 1115G4 12GB de RAM 256GB SSD, Intel UHD Graphics Xe G4 48EUs 60 Hz 1920x1080px Linux Endless', 
-        price: '$1339000', 
+        price: 1339000, 
         category: 'notebook', 
         img:'https://http2.mlstatic.com/D_NQ_NP_633646-MLA53601468472_022023-O.webp', 
         stock: 10, 
@@ -59,7 +59,7 @@ const products = [
     { 
         id: '7', 
         name: 'Pocophone Poco X5 Pro 5G Dual SIM 256 GB negro 8 GB RAM 12', 
-        price: '$1214900', 
+        price: 1214900, 
         category: 'celular', 
         img:'https://http2.mlstatic.com/D_NQ_NP_722574-MLU70044604036_062023-O.webp', 
         stock: 30, 
@@ -68,7 +68,7 @@ const products = [
     { 
         id: '8', 
         name: 'Tecno Spark 10 Pro 256gb / 8ram / 50mp', 
-        price: '$589900', 
+        price: 589900, 
         category: 'celular', 
         img:'https://http2.mlstatic.com/D_NQ_NP_647638-MLA69922626252_062023-O.webp', 
         stock: 10, 
@@ -77,7 +77,7 @@ const products = [
     { 
         id: '9', 
         name: 'Xiaomi Redmi Note 12 Pro+ 5G Dual SIM 256 GB obsidian black 8 GB RAM', 
-        price: '$1354900', 
+        price: 1354900, 
         category: 'celular', 
         img:'https://http2.mlstatic.com/D_NQ_NP_933725-MLA54384359928_032023-O.webp', 
         stock: 30, 
@@ -87,7 +87,7 @@ const products = [
     { 
         id: '10', 
         name: 'Xiaomi Lite Redmi Watch 2 Lite Sport 1.55" caja de abs black, malla black de tpu silicona y bisel negro de plástico', 
-        price: '$229900', 
+        price: 229900, 
         category: 'smartwatch', 
         img:'https://http2.mlstatic.com/D_NQ_NP_863961-MLA49011508089_022022-O.webp', 
         stock: 20, 
@@ -96,7 +96,7 @@ const products = [
     { 
         id: '11', 
         name: 'Apple Watch Series 8 GPS - Caja de aluminio medianoche 45 mm - Correa deportiva medianoche - Patrón', 
-        price: '$2080000', 
+        price: 2080000, 
         category: 'smartwatch', 
         img:'https://http2.mlstatic.com/D_NQ_NP_710273-MLA52127704169_102022-O.webp', 
         stock: 15, 
@@ -105,7 +105,7 @@ const products = [
     { 
         id: '12', 
         name: 'Samsung Galaxy Watch5 Pro (Bluetooth) 1.4" caja 45mm de titanio gris titanio, malla gris titanio y bisel gris titanio SM-R920', 
-        price: '$1479900', 
+        price: 1479900, 
         category: 'smartwatch', 
         img:'https://http2.mlstatic.com/D_NQ_NP_824722-MLA51453668020_092022-O.webp', 
         stock: 15, 

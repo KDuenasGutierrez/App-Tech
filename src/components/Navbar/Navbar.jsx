@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav>
             <h1>EcomTech</h1>
             <section>
-            <button onClick={() => navigate(`/`)}>
+                <button onClick={() => navigate(`/`)}>
                     Inicio
                 </button>
                 <button onClick={() => navigate(`/category/tablet`)}>
@@ -23,10 +23,10 @@ const Navbar = () => {
                 <button onClick={() => navigate(`/category/smartwatch`)}>
                     Smart Watch
                 </button>
-                <button onClick={() => navigate(`/cart`)}>
-                    <CartWidget />
-                </button>
             </section>
+            <CartWidget />
+
+
 
         </nav>
     )

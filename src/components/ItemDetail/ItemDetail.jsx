@@ -1,18 +1,18 @@
-import {useNavigate} from "react-router-dom"
-import { useState } from 'react';
+import { useState} from 'react';
+import {useCart} from '../../context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
-const ItemDetail = ({id, category, name, img, price, stock, description, addItem }) => {
+const ItemDetail = ({id, category, name, img, price, stock, description,}) => {
 
     const [quantity, setquantity] = useState(0)
 
-    const ItemCountHere = ItemCount
+    const {addItem} = useCart()
 
-    const handleOnAdd = (cantidad) => {
+    const handleOnAdd = (quantity) => {
 
         const objAddToCart = {
-            id, name, price, cantidad
+            id, name, price, quantity
         }
 
         addItem(objAddToCart)
@@ -21,11 +21,11 @@ const ItemDetail = ({id, category, name, img, price, stock, description, addItem
 
                 text: 'Se agregaron los productos al carrito',
                 
-                duration: 3000
+                duration: 4000
                 
                 }).showToast();
 
-            setquantity(cantidad)
+            setquantity(quantity)
     }
 
     return (
@@ -40,7 +40,7 @@ const ItemDetail = ({id, category, name, img, price, stock, description, addItem
                         <h5 className="card-text descripcion">{description}</h5>
                         {
                             quantity === 0 ? (
-                                    <ItemCountHere stock={stock} onAdd={handleOnAdd}/>
+                                    <ItemCount stock={stock} onAdd={handleOnAdd}/>
                                 ) : (
                                     <Link to='/cart' className='btn btn-success'>Finalizar Compra</Link>
                                 )

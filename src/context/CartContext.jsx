@@ -33,15 +33,17 @@ export const CartProvider = ({children}) => {
 
         const totalQuantity = getTotalQ()
 
-        const totalPrice = () => {
-            let totalP = 0
+        const getTotalP = () => {
+            let totalPrice = 0
 
             cart.forEach(prod =>{
-                totalP += prod.quantity * prod.price
+                totalPrice += prod.quantity * prod.price
                 })
 
-            return totalP
+            return totalPrice
         }
+
+        const totalPrice = getTotalP()
 
         const removeItem = (id) => {
             setCart(prev => prev.filter(prod => prod.id !== id))

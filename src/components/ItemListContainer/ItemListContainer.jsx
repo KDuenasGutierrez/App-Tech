@@ -45,8 +45,10 @@ const ItemListContainer = ({ Saludo }) => {
     if (loading) {
         return(
             <div className="d-flex justify-content-center">
-                <div  id="loadingSpinner" className="spinner-grow text-danger" role="status">
-                    <h2 className="">...Loading Products...</h2>
+                <div id="loadingSpinner" className="spinner-grow text-danger" role="status">
+                </div>
+                <div>
+                <h2 className="">...Loading Products...</h2>
                 </div>
             </div>
         )

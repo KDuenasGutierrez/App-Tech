@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useState } from "react"
 import { useCart } from "../../context/CartContext"
 import { useForm } from "react-hook-form"

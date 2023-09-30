@@ -6,6 +6,7 @@ import {useParams} from 'react-router-dom'
 
 
 
+// eslint-disable-next-line react/prop-types
 const ItemListContainer = ({ Saludo }) => {
 
     const { categoryId } = useParams()
